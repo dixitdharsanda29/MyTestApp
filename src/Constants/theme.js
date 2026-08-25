@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 
-export const colors = {
+export const lightColors = {
   primary: '#007AFF',
   secondary: '#5856D6',
   background: '#F5F5F5',
+  surface: '#FFFFFF',
   white: '#FFFFFF',
   black: '#000000',
   gray: '#8E8E93',
@@ -12,7 +13,33 @@ export const colors = {
   dark_gray: '#1C1C1E',
   red: '#FF3B30',
   border: '#E5E5EA',
+  text: '#000000',
+  subText: '#8E8E93',
+  card: '#FFFFFF',
+  inputBg: '#FFFFFF',
+  inputBorder: '#E5E5EA',
 };
+
+export const darkColors = {
+  primary: '#0A84FF',
+  secondary: '#5E5CE6',
+  background: '#000000',
+  surface: '#1C1C1E',
+  white: '#FFFFFF',
+  black: '#000000',
+  gray: '#8E8E93',
+  light_gray: '#2C2C2E',
+  dark_gray: '#1C1C1E',
+  red: '#FF453A',
+  border: '#38383A',
+  text: '#FFFFFF',
+  subText: '#98989D',
+  card: '#1C1C1E',
+  inputBg: '#1C1C1E',
+  inputBorder: '#38383A',
+};
+
+export const colors = lightColors;
 
 export const sizes = {
   f7: moderateScale(7),

@@ -1,6 +1,6 @@
 import { Platform, Alert, Linking } from 'react-native';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
-import { constantStrings } from '../Constants/constantStrings';
+import { constantStrings } from '@constants/constantStrings';
 
 export const requestPhotoPermission = async () => {
   const permission =

@@ -1,19 +1,21 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { routes } from '../Constants/routes';
-import Home from '../Screens/Home';
-import Listing from '../Screens/Listing';
-import Settings from '../Screens/Settings';
+import { routes } from '@constants/routes';
+import Home from '@screens/Home';
+import Listing from '@screens/Listing';
+import Settings from '@screens/Settings';
 import Ionicons from '@react-native-vector-icons/ionicons';
-import { colors } from '../Constants/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
+import { useTheme } from '@context/ThemeContext';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   const insets = useSafeAreaInsets();
+  const { colors } = useTheme();
+  
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -39,7 +41,7 @@ const BottomTabNavigator = () => {
           elevation: 0,
           shadowOpacity: 0,
           paddingTop: moderateScale(5),
-          backgroundColor: colors.white,
+          backgroundColor: colors.card,
         },
         tabBarButton: props => (
           <TouchableOpacity {...props} activeOpacity={1} />
